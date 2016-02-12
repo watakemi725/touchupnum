@@ -46,7 +46,6 @@ class ScoreViewController: UIViewController {
         OverAllLabel.text = NSString(format: "%.2f 点", allScore) as String
         
         
-        
     }
     
     @IBAction func topBack(){
