@@ -12,6 +12,9 @@ class ScoreViewController: UIViewController {
 
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     //AppDelegateのインスタンスを取得
+    
+    //NSUserDefaultsのインスタンスを生成
+    let defaults = NSUserDefaults.standardUserDefaults()
 
     @IBOutlet var scoreLabel:UILabel!
     @IBOutlet var comboLabel:UILabel!
@@ -45,6 +48,7 @@ class ScoreViewController: UIViewController {
         let allScore = scoreNum + speedNum + Double(comboNum)
         OverAllLabel.text = NSString(format: "%.2f 点", allScore) as String
         
+        rankNum(allScore)
         
     }
     
@@ -53,6 +57,56 @@ class ScoreViewController: UIViewController {
     self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
 //self.dismissViewControllerAnimated(true, completion: nil)
 //        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func rankNum(newScore:Double){
+        //もともと保存してるランキング配列を引っ張り出してくる
+        
+        //空の配列を用意
+        var scoreBox: [Double] = []
+        
+        //前回の保存内容があるかどうかを判定
+        if((defaults.objectForKey("SCORE")) != nil){
+            
+            //objectsを配列として確定させ、前回の保存内容を格納
+            let objects = defaults.objectForKey("SCORE") as? NSMutableArray
+            
+            //各名前を格納するための変数を宣言
+            var eachScore:AnyObject
+            
+            //前回の保存内容が格納された配列の中身を一つずつ取り出す
+            for eachScore in objects!{
+                //配列に追加していく
+                scoreBox.append(eachScore as! Double)
+            }
+        
+            
+            scoreBox.append(newScore)
+            
+            
+        }else{
+            //前回保存した記録がない場合
+            
+            //空の配列を用意
+            var scoreBox: [Double] = []
+            scoreBox.append(newScore)
+        
+        }
+        
+        
+        //追加かつソートを行って保存
+        
+        scoreBox.sortInPlace{ $1 < $0 }
+        
+        //表示は別のところでいいkな
+        print(scoreBox)
+        
+        //"NAME"というキーで配列namesを保存
+        defaults.setObject(scoreBox, forKey:"SCORE")
+        
+        // シンクロを入れないとうまく動作しないときがあります
+        defaults.synchronize()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -27,6 +27,18 @@
 		46C1AFD81C6DBAF800177990 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C1AFD71C6DBAF800177990 /* SystemConfiguration.framework */; };
 		46C1AFDE1C6DBE9D00177990 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C1AFDD1C6DBE9D00177990 /* GoogleMobileAds.framework */; };
 		46C1AFE01C6DBEB500177990 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C1AFDF1C6DBEB500177990 /* GoogleMobileAds.framework */; };
+		46C1AFE21C6E57CA00177990 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C1AFE11C6E57CA00177990 /* RankViewController.swift */; };
+		46C1B0101C70153300177990 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B0051C70153300177990 /* Contents.json */; };
+		46C1B0111C70153300177990 /* speedtap2-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B0061C70153300177990 /* speedtap2-29.png */; };
+		46C1B0121C70153300177990 /* speedtap2-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B0071C70153300177990 /* speedtap2-29@2x.png */; };
+		46C1B0131C70153300177990 /* speedtap2-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B0081C70153300177990 /* speedtap2-29@3x.png */; };
+		46C1B0141C70153300177990 /* speedtap2-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B0091C70153300177990 /* speedtap2-40.png */; };
+		46C1B0151C70153300177990 /* speedtap2-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B00A1C70153300177990 /* speedtap2-40@2x.png */; };
+		46C1B0161C70153300177990 /* speedtap2-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B00B1C70153300177990 /* speedtap2-40@3x.png */; };
+		46C1B0171C70153300177990 /* speedtap2-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B00C1C70153300177990 /* speedtap2-60@2x.png */; };
+		46C1B0181C70153300177990 /* speedtap2-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B00D1C70153300177990 /* speedtap2-60@3x.png */; };
+		46C1B0191C70153300177990 /* speedtap2-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B00E1C70153300177990 /* speedtap2-76.png */; };
+		46C1B01A1C70153300177990 /* speedtap2-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C1B00F1C70153300177990 /* speedtap2-76@2x.png */; };
 		46F3E5831C6AF4DE00163BAB /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3E5821C6AF4DE00163BAB /* TopViewController.swift */; };
 		46F3E5851C6AF4E600163BAB /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3E5841C6AF4E600163BAB /* ScoreViewController.swift */; };
 		46F3E5871C6AF4FC00163BAB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3E5861C6AF4FC00163BAB /* InfoViewController.swift */; };
@@ -77,6 +89,18 @@
 		46C1AFD71C6DBAF800177990 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		46C1AFDD1C6DBE9D00177990 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		46C1AFDF1C6DBEB500177990 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../広告admob系/GoogleMobileAdsSdkiOS-7.6.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		46C1AFE11C6E57CA00177990 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		46C1B0051C70153300177990 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		46C1B0061C70153300177990 /* speedtap2-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-29.png"; sourceTree = "<group>"; };
+		46C1B0071C70153300177990 /* speedtap2-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-29@2x.png"; sourceTree = "<group>"; };
+		46C1B0081C70153300177990 /* speedtap2-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-29@3x.png"; sourceTree = "<group>"; };
+		46C1B0091C70153300177990 /* speedtap2-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-40.png"; sourceTree = "<group>"; };
+		46C1B00A1C70153300177990 /* speedtap2-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-40@2x.png"; sourceTree = "<group>"; };
+		46C1B00B1C70153300177990 /* speedtap2-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-40@3x.png"; sourceTree = "<group>"; };
+		46C1B00C1C70153300177990 /* speedtap2-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-60@2x.png"; sourceTree = "<group>"; };
+		46C1B00D1C70153300177990 /* speedtap2-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-60@3x.png"; sourceTree = "<group>"; };
+		46C1B00E1C70153300177990 /* speedtap2-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-76.png"; sourceTree = "<group>"; };
+		46C1B00F1C70153300177990 /* speedtap2-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speedtap2-76@2x.png"; sourceTree = "<group>"; };
 		46F3E5821C6AF4DE00163BAB /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		46F3E5841C6AF4E600163BAB /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		46F3E5861C6AF4FC00163BAB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -157,12 +181,14 @@
 		46572C5A1C67B4000026DBD6 /* TouchUpNum */ = {
 			isa = PBXGroup;
 			children = (
+				46C1B0041C70153300177990 /* AppIcon.appiconset */,
 				46572C5B1C67B4000026DBD6 /* AppDelegate.swift */,
 				46F3E5821C6AF4DE00163BAB /* TopViewController.swift */,
 				46572C5D1C67B4000026DBD6 /* ViewController.swift */,
 				46F3E5841C6AF4E600163BAB /* ScoreViewController.swift */,
 				46F3E5861C6AF4FC00163BAB /* InfoViewController.swift */,
 				46F3E5881C6B0E3000163BAB /* EightViewController.swift */,
+				46C1AFE11C6E57CA00177990 /* RankViewController.swift */,
 				46572C5F1C67B4000026DBD6 /* Main.storyboard */,
 				46572C621C67B4000026DBD6 /* Assets.xcassets */,
 				46572C641C67B4000026DBD6 /* LaunchScreen.storyboard */,
@@ -187,6 +213,24 @@
 				46572C7D1C67B4030026DBD6 /* Info.plist */,
 			);
 			path = TouchUpNumUITests;
+			sourceTree = "<group>";
+		};
+		46C1B0041C70153300177990 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				46C1B0051C70153300177990 /* Contents.json */,
+				46C1B0061C70153300177990 /* speedtap2-29.png */,
+				46C1B0071C70153300177990 /* speedtap2-29@2x.png */,
+				46C1B0081C70153300177990 /* speedtap2-29@3x.png */,
+				46C1B0091C70153300177990 /* speedtap2-40.png */,
+				46C1B00A1C70153300177990 /* speedtap2-40@2x.png */,
+				46C1B00B1C70153300177990 /* speedtap2-40@3x.png */,
+				46C1B00C1C70153300177990 /* speedtap2-60@2x.png */,
+				46C1B00D1C70153300177990 /* speedtap2-60@3x.png */,
+				46C1B00E1C70153300177990 /* speedtap2-76.png */,
+				46C1B00F1C70153300177990 /* speedtap2-76@2x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +337,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C1B0181C70153300177990 /* speedtap2-60@3x.png in Resources */,
 				46572C661C67B4000026DBD6 /* LaunchScreen.storyboard in Resources */,
+				46C1B01A1C70153300177990 /* speedtap2-76@2x.png in Resources */,
+				46C1B0111C70153300177990 /* speedtap2-29.png in Resources */,
+				46C1B0131C70153300177990 /* speedtap2-29@3x.png in Resources */,
+				46C1B0121C70153300177990 /* speedtap2-29@2x.png in Resources */,
+				46C1B0191C70153300177990 /* speedtap2-76.png in Resources */,
+				46C1B0171C70153300177990 /* speedtap2-60@2x.png in Resources */,
+				46C1B0141C70153300177990 /* speedtap2-40.png in Resources */,
 				46572C631C67B4000026DBD6 /* Assets.xcassets in Resources */,
+				46C1B0161C70153300177990 /* speedtap2-40@3x.png in Resources */,
 				46572C611C67B4000026DBD6 /* Main.storyboard in Resources */,
+				46C1B0101C70153300177990 /* Contents.json in Resources */,
+				46C1B0151C70153300177990 /* speedtap2-40@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +377,7 @@
 			files = (
 				46F3E5891C6B0E3000163BAB /* EightViewController.swift in Sources */,
 				46F3E5831C6AF4DE00163BAB /* TopViewController.swift in Sources */,
+				46C1AFE21C6E57CA00177990 /* RankViewController.swift in Sources */,
 				46572C5E1C67B4000026DBD6 /* ViewController.swift in Sources */,
 				46572C5C1C67B4000026DBD6 /* AppDelegate.swift in Sources */,
 				46F3E5851C6AF4E600163BAB /* ScoreViewController.swift in Sources */,
