@@ -531,7 +531,7 @@
 				INFOPLIST_FILE = TouchUpNum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TUN.TouchUpNum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};
@@ -549,7 +549,7 @@
 				INFOPLIST_FILE = TouchUpNum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TUN.TouchUpNum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};

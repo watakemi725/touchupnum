@@ -58,6 +58,12 @@ class ScoreViewController: UIViewController {
 //self.dismissViewControllerAnimated(true, completion: nil)
 //        self.dismissViewControllerAnimated(true, completion: nil)
     }
+    @IBAction func playAgain(){
+        //        に度戻りを実現
+//        self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        //        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func rankNum(newScore:Double){
         //もともと保存してるランキング配列を引っ張り出してくる

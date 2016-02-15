@@ -489,6 +489,16 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQS-tU-NfA">
+                                <rect key="frame" x="195" y="436" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.52156862749999999" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="REPLAY">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain" destination="axW-ap-tav" eventType="touchUpInside" id="Qtp-Wt-OAb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -567,16 +577,6 @@
                                 <connections>
                                     <action selector="btnHantei:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXr-2a-aLq"/>
                                     <segue destination="dxf-L5-9mN" kind="modal" id="fLd-KC-3rc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97U-QZ-oyA">
-                                <rect key="frame" x="110" y="280" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.52156862749999999" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="ENDLESS">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnHantei:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5A-4l-m0X"/>
                                 </connections>
                             </button>
                         </subviews>
