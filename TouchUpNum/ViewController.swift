@@ -185,7 +185,6 @@ class ViewController: UIViewController {
         
         //通算のコンボ(連続点)を計算
         
-        
         appDelegate.comboNum = comboBox.count
         appDelegate.maxComboNum = comboBox.maxElement()!
     }
