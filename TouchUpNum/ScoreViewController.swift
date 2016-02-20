@@ -99,7 +99,11 @@ class ScoreViewController: UIViewController {
         
         }
         
+        /*
+
+            wakatimeを導入してみたけど結果が全然反映されない
         
+*/
         //追加かつソートを行って保存
         
         scoreBox.sortInPlace{ $1 < $0 }
