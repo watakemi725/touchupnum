@@ -11,6 +11,9 @@ import GoogleMobileAds
 
 class TopViewController: UIViewController, GADBannerViewDelegate {
 
+    
+    //Admob設定
+    
     // AdMob ID を入れてください
     let AdMobID = "pub-1674810718316989"
     let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"

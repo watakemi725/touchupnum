@@ -18,7 +18,6 @@ extension Array {
         }
     }
 }
-
 class ViewController: UIViewController {
     
     @IBOutlet var scoreLabel: UILabel!
