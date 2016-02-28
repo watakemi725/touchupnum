@@ -19,7 +19,6 @@ import UIKit
 
 class EightViewController: UIViewController {
 
-    
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var comboLabel: UILabel!
