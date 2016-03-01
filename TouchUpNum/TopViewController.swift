@@ -47,6 +47,7 @@ class TopViewController: UIViewController, GADBannerViewDelegate {
         admobView.loadRequest(admobRequest)
         
         self.view.addSubview(admobView)
+        
 
 //        // Do any additional setup after loading the view.
 //        

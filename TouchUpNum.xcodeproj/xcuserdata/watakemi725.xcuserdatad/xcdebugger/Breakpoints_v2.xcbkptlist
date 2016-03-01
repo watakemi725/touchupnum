@@ -17,38 +17,6 @@
             endingLineNumber = "108"
             landmarkName = "rankNum(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TouchUpNum.ScoreViewController.rankNum (TouchUpNum.ScoreViewController)(Swift.Double) -&gt; ()"
-                  moduleName = "TouchUpNum"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/watakemi725/Programing/Original/TouchUpNum/TouchUpNum/ScoreViewController.swift"
-                  timestampString = "477040764.071812"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "980">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TouchUpNum.ScoreViewController.(rankNum (TouchUpNum.ScoreViewController) -&gt; (Swift.Double) -&gt; ()).(closure #1)"
-                  moduleName = "TouchUpNum"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/watakemi725/Programing/Original/TouchUpNum/TouchUpNum/ScoreViewController.swift"
-                  timestampString = "477040764.072171"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -96,6 +64,22 @@
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "rankNum(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TouchUpNum/TopViewController.swift"
+            timestampString = "478502070.192826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
