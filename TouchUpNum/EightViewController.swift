@@ -17,6 +17,8 @@ import UIKit
 //    }
 //}
 
+
+
 class EightViewController: UIViewController {
 
     @IBOutlet var scoreLabel: UILabel!
@@ -205,7 +207,16 @@ class EightViewController: UIViewController {
     //        return copy
     //    }
     
-    
+//    override func shouldAutorotate() -> Bool{
+//        return false
+//    }
+//    
+//    override func supportedInterfaceOrientations() -> Int {
+//        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+//    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return [UIInterfaceOrientationMask.Landscape]
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
