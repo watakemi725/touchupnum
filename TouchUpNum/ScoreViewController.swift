@@ -48,8 +48,8 @@ class ScoreViewController: UIViewController {
         let allScore = scoreNum + speedNum + Double(comboNum)
         OverAllLabel.text = NSString(format: "%.2f 点", allScore) as String
         
-        rankNum(allScore)
-        
+//        rankNum(allScore
+        rankNum(allScore, switchPlay: appDelegate.switchPlay)
     }
     
     @IBAction func topBack(){
@@ -65,17 +65,17 @@ class ScoreViewController: UIViewController {
         //        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func rankNum(newScore:Double){
+    func rankNum(newScore:Double ,switchPlay:String){
         //もともと保存してるランキング配列を引っ張り出してくる
         
         //空の配列を用意
         var scoreBox: [Double] = []
         
         //前回の保存内容があるかどうかを判定
-        if((defaults.objectForKey("SCORE")) != nil){
+        if((defaults.objectForKey(switchPlay)) != nil){
             
             //objectsを配列として確定させ、前回の保存内容を格納
-            let objects = defaults.objectForKey("SCORE") as? NSMutableArray
+            let objects = defaults.objectForKey(switchPlay) as? NSMutableArray
             
             //各名前を格納するための変数を宣言
             var eachScore:AnyObject
@@ -112,7 +112,7 @@ class ScoreViewController: UIViewController {
         print(scoreBox)
         
         //"NAME"というキーで配列namesを保存
-        defaults.setObject(scoreBox, forKey:"SCORE")
+        defaults.setObject(scoreBox, forKey:switchPlay)
         
         // シンクロを入れないとうまく動作しないときがあります
         defaults.synchronize()

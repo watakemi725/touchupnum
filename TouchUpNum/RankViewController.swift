@@ -22,14 +22,27 @@ class RankViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        fourTextField.syste
+        
+        makeRanking(fourTextField, whichAikotoba: "SCOREFOUR")
+        
+        makeRanking(eightTextField, whichAikotoba: "SCOREEIGHT")
+        
+    }
+    
+    func makeRanking(whichTF:UITextView , whichAikotoba:String){
+        
+        
         //空の配列を用意
         var scoreBox: [Double] = []
         
         //前回の保存内容があるかどうかを判定
-        if((defaults.objectForKey("SCORE")) != nil){
-            
+//        if((defaults.objectForKey("SCOREFOUR")) != nil){
+        if((defaults.objectForKey(whichAikotoba)) != nil){
+        
             //objectsを配列として確定させ、前回の保存内容を格納
-            let objects = defaults.objectForKey("SCORE") as? NSMutableArray
+//            let objects = defaults.objectForKey("SCOREFOUR") as? NSMutableArray
+            let objects = defaults.objectForKey(whichAikotoba) as? NSMutableArray
             
             //各名前を格納するための変数を宣言
             var eachScore:AnyObject
@@ -42,19 +55,20 @@ class RankViewController: UIViewController {
             
             if scoreBox.count > 1 {
                 for i in 0...(scoreBox.count)-1 {
-//                    tokutenFour = tokutenFour + " \n\(i+1).\(scoreBox[i])点 "
-                     tokutenFour = tokutenFour + (NSString(format: "\n%d位 %.2f点",i+1,scoreBox[i] ) as String) as String
+                    //                    tokutenFour = tokutenFour + " \n\(i+1).\(scoreBox[i])点 "
+                    tokutenFour = tokutenFour + (NSString(format: "\n%d位 %.2f点",i+1,scoreBox[i] ) as String) as String
                 }
             }else if scoreBox.count == 1{
                 tokutenFour = " \n 1.\(scoreBox[0])点 "
             }
-
+            
             
         }else{
             //まだないねん
             print("notyet")
         }
-        fourTextField.text = tokutenFour
+        whichTF.text = tokutenFour
+        
     }
     
     override func didReceiveMemoryWarning() {

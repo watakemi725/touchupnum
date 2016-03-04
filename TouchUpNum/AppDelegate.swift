@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var maxComboNum = 0
     var missNum = 0
     var speedNum = 0.0
+    var switchPlay = "switch"
     
     var window: UIWindow?
 

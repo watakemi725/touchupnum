@@ -13,7 +13,7 @@ class TopViewController: UIViewController, GADBannerViewDelegate {
 
     
     
-    
+                              
     
     //Admob設定
     

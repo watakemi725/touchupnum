@@ -55,6 +55,17 @@ class EightViewController: UIViewController {
     //AppDelegateのインスタンスを取得
     var timer = NSTimer()
     
+    override func viewDidAppear(animated: Bool) {
+        tapNum = 0
+        downTime = 6.0
+        firstTime = downTime
+        scoreNum = 0.0
+        ruleNum = 0
+        comboNum = 0
+        speedNum = 0.0
+        correctNum = 0
+        missNum = 0
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -192,6 +203,9 @@ class EightViewController: UIViewController {
         
         appDelegate.comboNum = comboBox.count
         appDelegate.maxComboNum = comboBox.maxElement()!
+        
+        //保存するサイドの切り替え
+        appDelegate.switchPlay = "SCOREEIGHT"
     }
     
     //    func shuffle<T>(inout array: [T]) {

@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     var scoreBox:[Int] = []
     var comboBox:[Int] = []
     
+
     var tapNum = 0
     var downTime = 6.0
     var firstTime = 0.0
@@ -46,10 +47,21 @@ class ViewController: UIViewController {
     var correctNum = 0
     var missNum = 0
     
-    
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     //AppDelegateのインスタンスを取得
     var timer = NSTimer()
+    
+    override func viewDidAppear(animated: Bool) {
+         tapNum = 0
+         downTime = 6.0
+         firstTime = downTime
+         scoreNum = 0.0
+         ruleNum = 0
+         comboNum = 0
+         speedNum = 0.0
+         correctNum = 0
+         missNum = 0
+    }
     
     
     override func viewDidLoad() {
@@ -60,7 +72,7 @@ class ViewController: UIViewController {
         btnBox = [btn1,btn2,btn3,btn4]
         numBox = [1,2,3,0]
         
-        firstTime = downTime
+//        firstTime = downTime
         
         setNum()
         //        for num in 0...btnBox.count-1 {
@@ -187,6 +199,9 @@ class ViewController: UIViewController {
         
         appDelegate.comboNum = comboBox.count
         appDelegate.maxComboNum = comboBox.maxElement()!
+        
+        //保存するサイドの切り替え
+        appDelegate.switchPlay = "SCOREFOUR"
     }
     
     //    func shuffle<T>(inout array: [T]) {
