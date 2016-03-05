@@ -12,8 +12,8 @@ class RankViewController: UIViewController {
     //NSUserDefaultsのインスタンスを生成
     let defaults = NSUserDefaults.standardUserDefaults()
     
-    @IBOutlet var fourTextField:UITextView!
-    @IBOutlet var eightTextField:UITextView!
+    @IBOutlet var fourTextView:UITextView!
+    @IBOutlet var eightTextView:UITextView!
     
     var tokutenFour = ""
     
@@ -22,11 +22,11 @@ class RankViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        fourTextField.syste
+//        fourTextView.text
         
-        makeRanking(fourTextField, whichAikotoba: "SCOREFOUR")
+        makeRanking(fourTextView, whichAikotoba: "SCOREFOUR")
         
-        makeRanking(eightTextField, whichAikotoba: "SCOREEIGHT")
+        makeRanking(eightTextView, whichAikotoba: "SCOREEIGHT")
         
     }
     

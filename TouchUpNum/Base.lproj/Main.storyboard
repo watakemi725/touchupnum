@@ -356,8 +356,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="eightTextField" destination="8sE-Pg-KGL" id="FRK-GW-7EL"/>
-                        <outlet property="fourTextField" destination="gSZ-T5-gQQ" id="7wu-NX-KCF"/>
+                        <outlet property="eightTextView" destination="8sE-Pg-KGL" id="rra-cY-HTE"/>
+                        <outlet property="fourTextView" destination="gSZ-T5-gQQ" id="SF5-4U-j4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RlV-qR-eeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
