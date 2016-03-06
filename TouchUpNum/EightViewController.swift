@@ -202,10 +202,12 @@ class EightViewController: UIViewController {
         
         
         appDelegate.comboNum = comboBox.count
+        if comboBox.count>0{
         appDelegate.maxComboNum = comboBox.maxElement()!
-        
+        }
         //保存するサイドの切り替え
         appDelegate.switchPlay = "SCOREEIGHT"
+        
     }
     
     //    func shuffle<T>(inout array: [T]) {

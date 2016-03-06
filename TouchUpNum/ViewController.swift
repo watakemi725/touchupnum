@@ -89,6 +89,24 @@ class ViewController: UIViewController {
     
     @IBAction func startBtnAction(){
         startBtn.hidden = true
+        
+        let delay = 3 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            print("1")
+            
+            dispatch_after(time, dispatch_get_main_queue(), {
+                print("2")
+                
+                dispatch_after(time, dispatch_get_main_queue(), {
+                    print("3")
+                    
+                    
+                })
+            })
+            
+        })
+
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "eachSecond:", userInfo: nil, repeats: true)
         
     }
@@ -202,7 +220,9 @@ class ViewController: UIViewController {
         //通算のコンボ(連続点)を計算
         
         appDelegate.comboNum = comboBox.count
+        if comboBox.count>0{
         appDelegate.maxComboNum = comboBox.maxElement()!
+        }
         
         //保存するサイドの切り替え
         appDelegate.switchPlay = "SCOREFOUR"
