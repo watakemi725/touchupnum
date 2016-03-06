@@ -28,6 +28,10 @@ class RankViewController: UIViewController {
         
         makeRanking(eightTextView, whichAikotoba: "SCOREEIGHT")
         
+        fourTextView.selectable = true
+        eightTextView.selectable = true
+
+        
     }
     
     func makeRanking(whichTF:UITextView , whichAikotoba:String){
