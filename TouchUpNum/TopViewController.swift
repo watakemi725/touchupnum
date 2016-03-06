@@ -21,7 +21,7 @@ class TopViewController: UIViewController, GADBannerViewDelegate {
     let AdMobID = "ca-app-pub-1674810718316989/3785200958"
     let TEST_DEVICE_ID = "ac83f39cfb8fa51eff147abbfee9d361"
     let AdMobTest:Bool = true
-    let SimulatorTest:Bool = false
+    let SimulatorTest:Bool = true
     
 //    @IBOutlet weak var admobView: GADBannerView!
     

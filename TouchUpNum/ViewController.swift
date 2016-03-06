@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     var scoreBox:[Int] = []
     var comboBox:[Int] = []
     
-
+    
     var tapNum = 0
     var downTime = 6.0
     var firstTime = 0.0
@@ -56,15 +56,15 @@ class ViewController: UIViewController {
     var timer = NSTimer()
     
     override func viewDidAppear(animated: Bool) {
-         tapNum = 0
-         downTime = 6.0
-         firstTime = downTime
-         scoreNum = 0.0
-         ruleNum = 0
-         comboNum = 0
-         speedNum = 0.0
-         correctNum = 0
-         missNum = 0
+        tapNum = 0
+        downTime = 6.0
+        firstTime = downTime
+        scoreNum = 0.0
+        ruleNum = 0
+        comboNum = 0
+        speedNum = 0.0
+        correctNum = 0
+        missNum = 0
     }
     
     
@@ -76,7 +76,10 @@ class ViewController: UIViewController {
         btnBox = [btn1,btn2,btn3,btn4]
         numBox = [1,2,3,0]
         
-//        firstTime = downTime
+        let image = UIImage(named: "c0.png")! as UIImage
+        self.startBtn.setImage(image, forState: .Normal)
+        
+        //        firstTime = downTime
         
         setNum()
         //        for num in 0...btnBox.count-1 {
@@ -88,26 +91,43 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startBtnAction(){
-        startBtn.hidden = true
         
-        let delay = 3 * Double(NSEC_PER_SEC)
+        let delay = 0.5 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue(), {
-            print("1")
+            print("3")
+            let image = UIImage(named: "c3.png")! as UIImage
+            self.startBtn.setImage(image, forState: .Normal)
             
-            dispatch_after(time, dispatch_get_main_queue(), {
-                print("2")
-                
-                dispatch_after(time, dispatch_get_main_queue(), {
-                    print("3")
-                    
-                    
-                })
-            })
             
         })
-
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "eachSecond:", userInfo: nil, repeats: true)
+        let delay2 = 1.5 * Double(NSEC_PER_SEC)
+        let time2 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay2))
+        dispatch_after(time2, dispatch_get_main_queue(), {
+            print("2")
+            let image = UIImage(named: "c2.png")! as UIImage
+            self.startBtn.setImage(image, forState: .Normal)
+            
+        })
+        let delay3 = 2.5 * Double(NSEC_PER_SEC)
+        let time3 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay3))
+        dispatch_after(time3, dispatch_get_main_queue(), {
+            print("1")
+            let image = UIImage(named: "c1.png")! as UIImage
+            self.startBtn.setImage(image, forState: .Normal)
+            
+        })
+        let delay4 = 3.5 * Double(NSEC_PER_SEC)
+        let time4 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay4))
+        dispatch_after(time4, dispatch_get_main_queue(), {
+            self.startBtn.hidden = true
+            
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "eachSecond:", userInfo: nil, repeats: true)
+        })
+        
+        
+        
+        
         
     }
     
@@ -136,10 +156,12 @@ class ViewController: UIViewController {
             print("上タグ 下基準")
             print("rulenum=",ruleNum)
             print(btnBoxNew[sender.tag].tag)
-            //何も表示させない
-            //                btnBoxNew[sender.tag-1].setTitle("", forState: .Normal)
             
-            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
+            //何も表示させない
+//            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
+            btnBoxNew[sender.tag].hidden = true
+
+            
             
             //加点
             scoreShow(+1.0)
@@ -185,12 +207,13 @@ class ViewController: UIViewController {
             }
         }
         if combo>0{
-        comboBox.append(combo)
+            comboBox.append(combo)
         }
         comboLabel.text = String(combo) + "コンボ"
     }
     
     func setNum(){
+        //数字をシャッフル
         numBox.shuffle(numBox.count)
         
         btnBoxNew.removeAll()
@@ -202,10 +225,13 @@ class ViewController: UIViewController {
         
         
         for num in 0...btnBox.count-1 {
-            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
+            btnBoxNew[num].hidden = false
+            let image = appDelegate.btnPic[num]
+            btnBoxNew[num].setImage(image, forState: .Normal)
+//            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
             btnBoxNew[num].tag = num
-            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            btnBoxNew[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
+//            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
+//            btnBoxNew[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
             
         }
     }
@@ -221,7 +247,7 @@ class ViewController: UIViewController {
         
         appDelegate.comboNum = comboBox.count
         if comboBox.count>0{
-        appDelegate.maxComboNum = comboBox.maxElement()!
+            appDelegate.maxComboNum = comboBox.maxElement()!
         }
         
         //保存するサイドの切り替え

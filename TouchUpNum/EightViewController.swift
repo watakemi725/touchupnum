@@ -120,7 +120,8 @@ class EightViewController: UIViewController {
             //何も表示させない
             //                btnBoxNew[sender.tag-1].setTitle("", forState: .Normal)
             
-            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
+//            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
+            btnBoxNew[sender.tag].hidden = true
             
             //加点
             scoreShow(+1.0)
@@ -183,10 +184,14 @@ class EightViewController: UIViewController {
         
         
         for num in 0...btnBox.count-1 {
-            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
+            
+            btnBoxNew[num].hidden = false
+            let image = appDelegate.btnPic[num]
+            btnBoxNew[num].setImage(image, forState: .Normal)
+//            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
             btnBoxNew[num].tag = num
-            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            btnBoxNew[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
+//            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
+//            btnBoxNew[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
             
         }
     }

@@ -11,12 +11,12 @@ import GoogleMobileAds
 
 class ScoreViewController: UIViewController, GADBannerViewDelegate {
     
-    // AdMob ID を入れてください
+    // AdMob設定ここから
     let AdMobID = "ca-app-pub-1674810718316989/3785200958"
     let TEST_DEVICE_ID = "ac83f39cfb8fa51eff147abbfee9d361"
     let AdMobTest:Bool = true
     let SimulatorTest:Bool = false
-    
+    // AdMob設定ここまで
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     //AppDelegateのインスタンスを取得
@@ -59,40 +59,44 @@ class ScoreViewController: UIViewController, GADBannerViewDelegate {
         //        rankNum(allScore
         rankNum(allScore, switchPlay: appDelegate.switchPlay)
         
-        
-        
+        let delay = 0.5 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            
+            /*Admo設定 ここから*/
+            
+            var admobView: GADBannerView = GADBannerView()
+            admobView = GADBannerView(adSize:kGADAdSizeBanner)
+            
+            admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
+            admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+            admobView.adUnitID = self.AdMobID
+            admobView.delegate = self
+            admobView.rootViewController = self
+            
+            let admobRequest:GADRequest = GADRequest()
+            
+            if self.AdMobTest {
+                if self.SimulatorTest {
+                    admobRequest.testDevices = [kGADSimulatorID]
+                }
+                else {
+                    admobRequest.testDevices = [self.TEST_DEVICE_ID]
+                }
+                
+            }
+            
+            admobView.loadRequest(admobRequest)
+            
+            self.view.addSubview(admobView)
+            
+            /*Admo設定 ここまで*/
 
+        })
     }
     
     override func viewWillAppear(animated: Bool) {
-        /*Admo設定 ここから*/
-        
-        var admobView: GADBannerView = GADBannerView()
-        admobView = GADBannerView(adSize:kGADAdSizeBanner)
-        
-        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
-        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
-        admobView.adUnitID = AdMobID
-        admobView.delegate = self
-        admobView.rootViewController = self
-        
-        let admobRequest:GADRequest = GADRequest()
-        
-        if AdMobTest {
-            if SimulatorTest {
-                admobRequest.testDevices = [kGADSimulatorID]
-            }
-            else {
-                admobRequest.testDevices = [TEST_DEVICE_ID]
-            }
-            
-        }
-        
-        admobView.loadRequest(admobRequest)
-        
-        self.view.addSubview(admobView)
-        
-        /*Admo設定 ここまで*/
+
     }
     
     @IBAction func topBack(){
