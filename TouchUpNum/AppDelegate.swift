@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var btnPic:[UIImage]! = [UIImage(named: "en1.png")!,UIImage(named:"en2.png")!,UIImage(named:"en3.png")!,UIImage(named:"en4.png")!,UIImage(named:"en5.png")!,UIImage(named:"en6.png")!,UIImage(named:"en7.png")!,UIImage(named:"en8.png")!]
     
-    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
