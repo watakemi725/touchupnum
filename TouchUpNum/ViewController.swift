@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var comboLabel: UILabel!
+    @IBOutlet var adviceLabel: UILabel!
     
     @IBOutlet var btn1: UIButton!
     @IBOutlet var btn2: UIButton!
@@ -76,7 +77,7 @@ class ViewController: UIViewController {
         btnBox = [btn1,btn2,btn3,btn4]
         numBox = [1,2,3,0]
         
-        let image = UIImage(named: "c0.png")! as UIImage
+        let image = UIImage(named: "a0.png")! as UIImage
         self.startBtn.setImage(image, forState: .Normal)
         
         //        firstTime = downTime
@@ -96,7 +97,7 @@ class ViewController: UIViewController {
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue(), {
             print("3")
-            let image = UIImage(named: "c3.png")! as UIImage
+            let image = UIImage(named: "a3.png")! as UIImage
             self.startBtn.setImage(image, forState: .Normal)
             
             
@@ -105,7 +106,7 @@ class ViewController: UIViewController {
         let time2 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay2))
         dispatch_after(time2, dispatch_get_main_queue(), {
             print("2")
-            let image = UIImage(named: "c2.png")! as UIImage
+            let image = UIImage(named: "a2.png")! as UIImage
             self.startBtn.setImage(image, forState: .Normal)
             
         })
@@ -113,7 +114,7 @@ class ViewController: UIViewController {
         let time3 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay3))
         dispatch_after(time3, dispatch_get_main_queue(), {
             print("1")
-            let image = UIImage(named: "c1.png")! as UIImage
+            let image = UIImage(named: "a1.png")! as UIImage
             self.startBtn.setImage(image, forState: .Normal)
             
         })
@@ -158,8 +159,8 @@ class ViewController: UIViewController {
             print(btnBoxNew[sender.tag].tag)
             
             //何も表示させない
-//            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
-            btnBoxNew[sender.tag].hidden = true
+            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
+//            btnBoxNew[sender.tag].hidden = true
 
             
             
@@ -177,6 +178,8 @@ class ViewController: UIViewController {
                 ruleNum = 0
             }
             
+            adviceLabel.text = "Nice!!"
+            
         }else{
             //間違えた時
             //何もしないか、マイナスポイント
@@ -184,6 +187,7 @@ class ViewController: UIViewController {
             scoreShow(-1.0)
             missNum++
             scoreBox.append(0)
+                        adviceLabel.text = "Bad!!"
         }
         tapNum++
         
@@ -192,7 +196,7 @@ class ViewController: UIViewController {
     
     func scoreShow(score:Double){
         scoreNum = score + scoreNum
-        scoreLabel.text = String(scoreNum)+"点"
+        scoreLabel.text = String(scoreNum)+"point"
     }
     
     //現状のコンボを表示するように
@@ -209,7 +213,7 @@ class ViewController: UIViewController {
         if combo>0{
             comboBox.append(combo)
         }
-        comboLabel.text = String(combo) + "コンボ"
+        comboLabel.text = String(combo) + "combo"
     }
     
     func setNum(){
@@ -226,14 +230,28 @@ class ViewController: UIViewController {
         
         for num in 0...btnBox.count-1 {
             btnBoxNew[num].hidden = false
+             btnBoxNew[num].tag = num
             let image = appDelegate.btnPic[num]
-            btnBoxNew[num].setImage(image, forState: .Normal)
-//            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
-            btnBoxNew[num].tag = num
-//            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
+//            btnBoxNew[num].setImage(image, forState: .Normal)
+            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
+            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
 //            btnBoxNew[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
             
         }
+    }
+    
+    func makeMove(){
+        //アニメーション実行部分
+//        UIView.animateWithDuration(
+//            duration,
+//            //            options: UIViewAnimationOptions.Repeat,
+//            animations: {
+//                
+//                shortView.transform = CGAffineTransformMakeRotation(( CGFloat(Angle1) * CGFloat(M_PI)) / 180.0)
+//                longView.transform = CGAffineTransformMakeRotation(( CGFloat(Angle2) * CGFloat(M_PI)) / 180.0)
+//            }, completion: { finished in
+//                
+//        })
     }
     
     func CalcAll(){

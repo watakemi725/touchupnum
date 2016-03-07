@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import Accounts
 
 class ScoreViewController: UIViewController, GADBannerViewDelegate {
     
@@ -46,15 +47,15 @@ class ScoreViewController: UIViewController, GADBannerViewDelegate {
         let maxCombo = appDelegate.maxComboNum
         
         
-        scoreLabel.text = String(scoreNum)+"点"
-        correctLabel.text = String(appDelegate.correctNum) + "個"
-        missLabel.text = String(appDelegate.missNum) + "個"
-        speedLabel.text = NSString(format: "%.2f タップ/秒", appDelegate.speedNum) as String
-        comboLabel.text = String(appDelegate.comboNum) + "コンボ"
-        maxComboLabel.text = "最大" + String(maxCombo) + "コンボ"
+        scoreLabel.text = String(scoreNum)+"point"
+        correctLabel.text = String(appDelegate.correctNum) + "times"
+        missLabel.text = String(appDelegate.missNum) + "times"
+        speedLabel.text = NSString(format: "%.2f tap/sec", appDelegate.speedNum) as String
+        comboLabel.text = String(appDelegate.comboNum) + "combo"
+        maxComboLabel.text = "max" + String(maxCombo) + "combo"
         
         let allScore = scoreNum + speedNum + Double(comboNum)
-        OverAllLabel.text = NSString(format: "%.2f 点", allScore) as String
+        OverAllLabel.text = NSString(format: "%.2fpoints", allScore) as String
         
         //        rankNum(allScore
         rankNum(allScore, switchPlay: appDelegate.switchPlay)
@@ -91,12 +92,61 @@ class ScoreViewController: UIViewController, GADBannerViewDelegate {
             self.view.addSubview(admobView)
             
             /*Admo設定 ここまで*/
-
+            
         })
     }
     
+    
+    @IBAction func postBtn(){
+        //sns投稿用
+        
+        let layer = UIApplication.sharedApplication().keyWindow?.layer;
+        
+        let scale = UIScreen.mainScreen().scale;
+        UIGraphicsBeginImageContextWithOptions(layer!.frame.size, false, scale);
+        
+        layer!.renderInContext(UIGraphicsGetCurrentContext()!)
+        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext();
+        
+        // 共有する項目
+        let shareText = "Played SPEED TAP"
+        let shareWebsite = NSURL(string: "https://www.apple.com/jp/watch/")!
+//        let shareImage = UIImage(named: "c1.png")!
+        let shareImage = screenshot
+        
+        
+        let delay = 0.5 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            
+        
+        let activityItems = [shareText, shareWebsite, shareImage]
+        
+        // 初期化処理
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        // 使用しないアクティビティタイプ
+        let excludedActivityTypes = [
+            UIActivityTypePostToWeibo,
+            UIActivityTypeSaveToCameraRoll,
+            UIActivityTypePrint,
+            UIActivityTypeMessage,
+            UIActivityTypeMail,
+            UIActivityTypeCopyToPasteboard
+            ,UIActivityTypeAssignToContact
+            ,UIActivityTypeAddToReadingList
+        ]
+        
+        activityVC.excludedActivityTypes = excludedActivityTypes
+        
+        // UIActivityViewControllerを表示
+        self.presentViewController(activityVC, animated: true, completion: nil)
+        })
+    
+    }
     override func viewWillAppear(animated: Bool) {
-
+        
     }
     
     @IBAction func topBack(){
@@ -141,7 +191,7 @@ class ScoreViewController: UIViewController, GADBannerViewDelegate {
             //前回保存した記録がない場合
             
             //空の配列を用意
-            var scoreBox: [Double] = []
+            //            var scoreBox: [Double] = []
             scoreBox.append(newScore)
             
         }

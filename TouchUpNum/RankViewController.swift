@@ -69,16 +69,16 @@ class RankViewController: UIViewController, GADBannerViewDelegate {
             if scoreBox.count > 1 {
                 for i in 0...(scoreBox.count)-1 {
                     //                    tokutenFour = tokutenFour + " \n\(i+1).\(scoreBox[i])点 "
-                    tokutenFour = tokutenFour + (NSString(format: "\n%d位 %.2f点",i+1,scoreBox[i] ) as String) as String
+                    tokutenFour = tokutenFour + (NSString(format: "%d. %.2fpoint\n",i+1,scoreBox[i] ) as String) as String
                 }
             }else if scoreBox.count == 1{
-                tokutenFour = " \n 1.\(scoreBox[0])点 "
+                tokutenFour = NSString(format: "1. %.2fpoint\n",scoreBox[0]) as String
             }
             
             
         }else{
             //まだないねん
-            print("notyet")
+            tokutenFour = "NO SCORES \n PLAY THE GAME"
         }
         whichTF.text = tokutenFour
         

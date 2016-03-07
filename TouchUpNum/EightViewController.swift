@@ -20,10 +20,12 @@ import UIKit
 
 
 class EightViewController: UIViewController {
-
+    
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var comboLabel: UILabel!
+//    @IBOutlet var adviceLabel: UILabel!
+    
     
     @IBOutlet var btn1: UIButton!
     @IBOutlet var btn2: UIButton!
@@ -120,7 +122,7 @@ class EightViewController: UIViewController {
             //何も表示させない
             //                btnBoxNew[sender.tag-1].setTitle("", forState: .Normal)
             
-//            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
+            //            btnBoxNew[sender.tag].setTitle("", forState: .Normal)
             btnBoxNew[sender.tag].hidden = true
             
             //加点
@@ -136,6 +138,7 @@ class EightViewController: UIViewController {
                 setNum()
                 ruleNum = 0
             }
+//            adviceLabel.text = "Nice!!"
             
         }else{
             //間違えた時
@@ -144,6 +147,7 @@ class EightViewController: UIViewController {
             scoreShow(-1.0)
             missNum++
             scoreBox.append(0)
+//            adviceLabel.text = "Bad!!"
         }
         tapNum++
         
@@ -152,7 +156,7 @@ class EightViewController: UIViewController {
     
     func scoreShow(score:Double){
         scoreNum = score + scoreNum
-        scoreLabel.text = String(scoreNum)+"点"
+        scoreLabel.text = String(scoreNum)+"point"
     }
     
     //現状のコンボを表示するように
@@ -169,7 +173,7 @@ class EightViewController: UIViewController {
         if combo>0{
             comboBox.append(combo)
         }
-        comboLabel.text = String(combo) + "コンボ"
+        comboLabel.text = String(combo) + "combo"
     }
     
     func setNum(){
@@ -188,10 +192,10 @@ class EightViewController: UIViewController {
             btnBoxNew[num].hidden = false
             let image = appDelegate.btnPic[num]
             btnBoxNew[num].setImage(image, forState: .Normal)
-//            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
+            //            btnBoxNew[num].setTitle(String(num+1), forState: .Normal)
             btnBoxNew[num].tag = num
-//            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
-//            btnBoxNew[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
+            //            btnBoxNew[num].setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            //            btnBoxNew[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
             
         }
     }
@@ -208,7 +212,7 @@ class EightViewController: UIViewController {
         
         appDelegate.comboNum = comboBox.count
         if comboBox.count>0{
-        appDelegate.maxComboNum = comboBox.maxElement()!
+            appDelegate.maxComboNum = comboBox.maxElement()!
         }
         //保存するサイドの切り替え
         appDelegate.switchPlay = "SCOREEIGHT"
@@ -228,13 +232,13 @@ class EightViewController: UIViewController {
     //        return copy
     //    }
     
-//    override func shouldAutorotate() -> Bool{
-//        return false
-//    }
-//    
-//    override func supportedInterfaceOrientations() -> Int {
-//        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
-//    }
+    //    override func shouldAutorotate() -> Bool{
+    //        return false
+    //    }
+    //
+    //    override func supportedInterfaceOrientations() -> Int {
+    //        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    //    }
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return [UIInterfaceOrientationMask.Landscape]
     }
@@ -244,15 +248,15 @@ class EightViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
