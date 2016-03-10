@@ -23,16 +23,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var btnPic:[UIImage]! = [UIImage(named: "en1.png")!,UIImage(named:"en2.png")!,UIImage(named:"en3.png")!,UIImage(named:"en4.png")!,UIImage(named:"en5.png")!,UIImage(named:"en6.png")!,UIImage(named:"en7.png")!,UIImage(named:"en8.png")!]
     
+    func grabStoryboard() -> UIStoryboard {
+        var storyboard = UIStoryboard()
+        var height = UIScreen.mainScreen().bounds.size.height
+        
+        if height == 480 {
+            storyboard = UIStoryboard(name: "Main3.5", bundle: nil)
+//            iphone4,4s
+        } else if height == 667 {
+            storyboard = UIStoryboard(name: "Main4.7", bundle: nil)
+//            iphone6,6s
+        } else if height == 736 {
+            storyboard = UIStoryboard(name: "Main5.5", bundle: nil)
+//            iphone6Plus
+        } else {
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+        }
+        return storyboard
+    }
+    
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         
         
+        var storyboard: UIStoryboard = self.grabStoryboard()
+        if let window = window {
+            window.rootViewController = storyboard.instantiateInitialViewController()! as UIViewController
+        }
+        
+        self.window?.makeKeyAndVisible()
+        
+        return true
         
         
         
         return true
     }
+    
+ 
+
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
