@@ -16,7 +16,6 @@ import UIKit
 //        }
 //    }
 //}
-
 class EightViewController: UIViewController {
     
     @IBOutlet var scoreLabel: UILabel!
