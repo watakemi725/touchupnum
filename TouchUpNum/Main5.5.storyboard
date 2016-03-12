@@ -85,14 +85,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMu-xP-2w4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="-60"/>
+            <point key="canvasLocation" x="-187" y="172"/>
         </scene>
         <!--Eight View Controller-->
         <scene sceneID="JOH-oA-aNv">
             <objects>
                 <viewController id="mBD-wg-GwX" customClass="EightViewController" customModule="TouchUpNum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cN2-kG-Q8W">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E9p-Az-45C">
@@ -246,6 +246,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="btn1" destination="rfo-En-vpB" id="qvW-r4-CfH"/>
                         <outlet property="btn2" destination="ubR-H9-Xh5" id="4KC-cC-tDQ"/>
@@ -264,14 +265,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLG-9b-gc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="-460"/>
+            <point key="canvasLocation" x="941" y="-366"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FxZ-w1-SQN">
             <objects>
                 <viewController id="bwi-qC-fiS" customClass="ViewController" customModule="TouchUpNum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mWB-2z-c5R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n0O-lX-pqY">
@@ -400,6 +401,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="adviceLabel" destination="Txc-Fg-BrG" id="JHf-nI-Oys"/>
                         <outlet property="btn1" destination="n0O-lX-pqY" id="TXP-qZ-RuM"/>
@@ -415,14 +417,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrr-2x-d14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="78"/>
+            <point key="canvasLocation" x="823" y="318"/>
         </scene>
         <!--Rank View Controller-->
         <scene sceneID="66d-Z6-cv1">
             <objects>
                 <viewController id="YJm-Lb-2C1" customClass="RankViewController" customModule="TouchUpNum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qor-xK-eER">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="123456789011123456789022123456789033123456789044123456789055123456789066123456789077123456789088123456789099123456789000" textAlignment="center" id="bCM-r8-FIj">
@@ -488,6 +490,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="eightTextView" destination="bCM-r8-FIj" id="jhc-hC-x2W"/>
                         <outlet property="fourTextView" destination="LgM-0D-hQZ" id="Rsn-aH-Lx8"/>
@@ -495,14 +498,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFS-Wh-H5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="746"/>
+            <point key="canvasLocation" x="823" y="1160"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="cnW-1X-5Xs">
             <objects>
                 <viewController id="Y3r-MS-Z7J" customClass="InfoViewController" customModule="TouchUpNum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AN6-GT-C1f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0jq-uF-qKH">
@@ -632,17 +635,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q5n-Oc-cxR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQs-AN-amo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="746"/>
+            <point key="canvasLocation" x="1272" y="1160"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="Fgk-We-Lt0">
             <objects>
                 <viewController id="FDZ-19-TNc" customClass="ScoreViewController" customModule="TouchUpNum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQ2-Rb-vt4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hJG-0q-GHK">
@@ -806,6 +810,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="OverAllLabel" destination="hg8-fP-UFK" id="JKR-UT-1gW"/>
                         <outlet property="comboLabel" destination="CML-Pa-yAz" id="8fo-AA-DWT"/>
@@ -818,14 +823,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAe-nJ-oN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="78"/>
+            <point key="canvasLocation" x="1272" y="318"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="94f-8D-XA2">
             <objects>
                 <viewController id="0c3-xD-9aX" customClass="TopViewController" customModule="TouchUpNum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vp5-1G-vrb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xKB-r2-w9r">
@@ -912,17 +917,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xp6-Ga-98T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="78"/>
+            <point key="canvasLocation" x="352" y="318"/>
         </scene>
         <!--How View Controller-->
         <scene sceneID="qz5-hE-z6E">
             <objects>
                 <viewController id="9VP-oQ-qnH" customClass="HowViewController" customModule="TouchUpNum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akj-fp-d5Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WTr-pD-i6g">
@@ -989,10 +995,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cx8-Su-sLp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSj-Xf-jFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="746"/>
+            <point key="canvasLocation" x="352" y="1160"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
