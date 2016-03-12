@@ -48,8 +48,7 @@ class ViewController: UIViewController {
     var correctNum = 0
     var missNum = 0
     
-    
-    
+
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     //AppDelegateのインスタンスを取得_
     
