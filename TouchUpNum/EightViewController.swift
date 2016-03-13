@@ -56,7 +56,7 @@ class EightViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         tapNum = 0
-        downTime = 6.0
+        downTime = appDelegate.topNum
         firstTime = downTime
         scoreNum = 0.0
         ruleNum = 0

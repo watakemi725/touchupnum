@@ -7,20 +7,63 @@
 //
 
 import UIKit
+import GoogleMobileAds
 /*
 設定画面てきあ要素
 */
 
 
-class InfoViewController: UIViewController {
+class InfoViewController: UIViewController , GADBannerViewDelegate {
     
     
     
+    
+    
+    //Admob設定
+    
+    // AdMob ID を入れてください
+    let AdMobID = "ca-app-pub-1674810718316989/3785200958"
+    let TEST_DEVICE_ID = "ac83f39cfb8fa51eff147abbfee9d361"
+    let AdMobTest:Bool = true
+    let SimulatorTest:Bool = false
+    
+    
+    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    //AppDelegateのインスタンスを取得
+    
+    @IBOutlet var topnumBtn:UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        var admobView: GADBannerView = GADBannerView()
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        
+        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
+        //        admobView.frame.origin = CGPointMake(0,200)
+        
+        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+        admobView.adUnitID = AdMobID
+        admobView.delegate = self
+        admobView.rootViewController = self
+        
+        let admobRequest:GADRequest = GADRequest()
+        
+        if AdMobTest {
+            if SimulatorTest {
+                admobRequest.testDevices = [kGADSimulatorID]
+            }
+            else {
+                admobRequest.testDevices = [TEST_DEVICE_ID]
+            }
+            
+        }
+        
+        admobView.loadRequest(admobRequest)
+        
+        self.view.addSubview(admobView)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,18 +73,45 @@ class InfoViewController: UIViewController {
     
     @IBAction func clearRank(){
         
-        //ランキングデータをすべて全削除
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("SCOREFOUR")
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("SCOREEIGHT")
+        
+        
+        
+        // UIAlertController
+        let alertController:UIAlertController = UIAlertController(title: "Alert", message: "Clear All Data?", preferredStyle: .Alert)
+        
+        // 選択肢
+        // 異なる方法でactionを設定してみた
+        let actionOK = UIAlertAction(title: "OK", style: .Default){
+            action in
+            //            self.labelSet("OK")
+            //ランキングデータをすべて全削除
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("SCOREFOUR")
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("SCOREEIGHT")
+        }
+        let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel){
+            (action) -> Void in
+            //            self.label.text = "Cancel"
+        }
+        
+        // actionを追加
+        alertController.addAction(actionOK)
+        alertController.addAction(actionCancel)
+        
+        // UIAlertの起動
+        presentViewController(alertController, animated: true, completion: nil)
+        
         
     }
     
     @IBAction func changeStartTime(){
-        var alert = UIAlertController(title: "yo", message: "go", preferredStyle: .Alert)
+        var alert = UIAlertController(title: "Change Max Time", message: "Type in the Time", preferredStyle: .Alert)
         let saveAction = UIAlertAction(title: "Done", style: .Default){(action :UIAlertAction!) -> Void in
             let textField = alert.textFields![0] as UITextField
             //ひょうじ
             print(textField.text)
+
+            self.appDelegate.topNum = Double(textField.text!)!
+            self.topnumBtn.setTitle("\(textField.text!) sec", forState: .Normal)
             
         }
         

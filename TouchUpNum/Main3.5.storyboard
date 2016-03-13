@@ -519,11 +519,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L0D-SS-yNg">
-                                <rect key="frame" x="160" y="136" width="160" height="40"/>
+                                <rect key="frame" x="160" y="132" width="160" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-BoldItalic" family="Brandon Grotesque" pointSize="25"/>
-                                <state key="normal" title="7 sec">
+                                <state key="normal" title="6 sec">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -615,6 +615,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Ag-Vl-4pv"/>
+                    <connections>
+                        <outlet property="topnumBtn" destination="L0D-SS-yNg" id="O10-eI-GJP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnH-SJ-ekp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

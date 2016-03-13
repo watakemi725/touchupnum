@@ -542,11 +542,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uTv-xt-aKq">
-                                <rect key="frame" x="207" y="136" width="160" height="40"/>
+                                <rect key="frame" x="207" y="132" width="160" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-BoldItalic" family="Brandon Grotesque" pointSize="25"/>
-                                <state key="normal" title="7 sec">
+                                <state key="normal" title="6 sec">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -618,6 +618,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q5n-Oc-cxR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="topnumBtn" destination="uTv-xt-aKq" id="ruO-7F-2gl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQs-AN-amo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

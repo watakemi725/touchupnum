@@ -121,17 +121,6 @@
                                     <action selector="btnHantei:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NxX-uJ-scv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeH-1o-dvE">
-                                <rect key="frame" x="44" y="263" width="480" height="241"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="BrandonGrotesque-BoldItalic" family="Brandon Grotesque" pointSize="66"/>
-                                <state key="normal" title="START">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="startBtnAction" destination="dxf-L5-9mN" eventType="touchUpInside" id="hmw-uM-e8Y"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUo-OO-8gr">
                                 <rect key="frame" x="164" y="79" width="121" height="121"/>
                                 <state key="normal">
@@ -211,6 +200,17 @@
                                 <connections>
                                     <action selector="btnHantei:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FE3-kv-xJa"/>
                                     <action selector="btnHantei:" destination="dxf-L5-9mN" eventType="touchUpInside" id="u4Z-OA-YAD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeH-1o-dvE">
+                                <rect key="frame" x="43" y="79" width="480" height="241"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-BoldItalic" family="Brandon Grotesque" pointSize="66"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtnAction" destination="dxf-L5-9mN" eventType="touchUpInside" id="hmw-uM-e8Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -496,10 +496,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-H6-Ufc">
-                                <rect key="frame" x="160" y="136" width="160" height="40"/>
+                                <rect key="frame" x="160" y="132" width="160" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-BoldItalic" family="Brandon Grotesque" pointSize="25"/>
-                                <state key="normal" title="7 sec">
+                                <state key="normal" title="6 sec">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -584,6 +584,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SeC-9o-Rht"/>
+                    <connections>
+                        <outlet property="topnumBtn" destination="iY9-H6-Ufc" id="nP8-eS-S4s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5St-Au-6D0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -909,6 +912,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kbf-uN-hmr"/>
+        <segue reference="fPT-kE-eOm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var speedNum = 0.0
     var switchPlay = "switch"
     
-    var topNum = 0
+    var topNum = 6.0
     
     var window: UIWindow?
     

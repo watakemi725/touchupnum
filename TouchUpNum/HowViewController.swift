@@ -7,13 +7,51 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class HowViewController: UIViewController {
+class HowViewController: UIViewController , GADBannerViewDelegate {
+    
+    
+    // AdMob ID を入れてください
+    let AdMobID = "ca-app-pub-1674810718316989/3785200958"
+    let TEST_DEVICE_ID = "ac83f39cfb8fa51eff147abbfee9d361"
+    let AdMobTest:Bool = true
+    let SimulatorTest:Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        var admobView: GADBannerView = GADBannerView()
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        
+        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
+        //        admobView.frame.origin = CGPointMake(0,200)
+        
+        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+        admobView.adUnitID = AdMobID
+        admobView.delegate = self
+        admobView.rootViewController = self
+        
+        let admobRequest:GADRequest = GADRequest()
+        
+        if AdMobTest {
+            if SimulatorTest {
+                admobRequest.testDevices = [kGADSimulatorID]
+            }
+            else {
+                admobRequest.testDevices = [TEST_DEVICE_ID]
+            }
+            
+        }
+        
+        admobView.loadRequest(admobRequest)
+        
+        self.view.addSubview(admobView)
+        
+
     }
     
     

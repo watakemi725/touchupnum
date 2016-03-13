@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 let DetailSegueName = "scorePage"
 
@@ -18,7 +19,7 @@ extension Array {
         }
     }
 }
-class ViewController: UIViewController {
+class ViewController: UIViewController, GADBannerViewDelegate  {
     
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
@@ -55,9 +56,19 @@ class ViewController: UIViewController {
     
     var timer = NSTimer()
     
+    
+    
+    //Admob設定
+    
+    // AdMob ID を入れてください
+    let AdMobID = "ca-app-pub-1674810718316989/3785200958"
+    let TEST_DEVICE_ID = "ac83f39cfb8fa51eff147abbfee9d361"
+    let AdMobTest:Bool = true
+    let SimulatorTest:Bool = false
+    
     override func viewDidAppear(animated: Bool) {
         tapNum = 0
-        downTime = 6.0
+        downTime = appDelegate.topNum
         firstTime = downTime
         scoreNum = 0.0
         ruleNum = 0
@@ -88,6 +99,33 @@ class ViewController: UIViewController {
         //            btnBox[num].titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(50))
         //
         //        }
+        var admobView: GADBannerView = GADBannerView()
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        
+        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
+        //        admobView.frame.origin = CGPointMake(0,200)
+        
+        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+        admobView.adUnitID = AdMobID
+        admobView.delegate = self
+        admobView.rootViewController = self
+        
+        let admobRequest:GADRequest = GADRequest()
+        
+        if AdMobTest {
+            if SimulatorTest {
+                admobRequest.testDevices = [kGADSimulatorID]
+            }
+            else {
+                admobRequest.testDevices = [TEST_DEVICE_ID]
+            }
+            
+        }
+        
+        admobView.loadRequest(admobRequest)
+        
+        self.view.addSubview(admobView)
+
     }
     
     @IBAction func startBtnAction(){
