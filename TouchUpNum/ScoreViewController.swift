@@ -19,6 +19,7 @@ class ScoreViewController: UIViewController, GADBannerViewDelegate {
     let SimulatorTest:Bool = false
     // AdMob設定ここまで
     
+    
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     //AppDelegateのインスタンスを取得
     
