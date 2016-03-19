@@ -893,7 +893,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y5F-ls-DnR">
-                                <rect key="frame" x="0.0" y="202" width="320" height="129"/>
+                                <rect key="frame" x="0.0" y="292" width="320" height="129"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Touch up the Numbers  from the smaller to the higher
 0 - &gt; 4 or 0 -&gt; 8</string>
