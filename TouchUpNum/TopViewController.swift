@@ -11,7 +11,7 @@ import GoogleMobileAds
 
 class TopViewController: UIViewController, GADBannerViewDelegate {
 
-            
+    
     
     //Admob設定
     
@@ -70,7 +70,6 @@ class TopViewController: UIViewController, GADBannerViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
