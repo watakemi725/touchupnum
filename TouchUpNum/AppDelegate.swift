@@ -18,9 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var missNum = 0
     var speedNum = 0.0
     var switchPlay = "switch"
-    
-    
-    
     var topNum = 6.0
     
     var window: UIWindow?
@@ -33,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if height == 480 {
             storyboard = UIStoryboard(name: "Main3.5", bundle: nil)
-//            iphone4,4s
+            //            iphone4,4s
         } else if height == 667 {
             storyboard = UIStoryboard(name: "Main4.7", bundle: nil)
-//            iphone6,6s
+            //            iphone6,6s
         } else if height == 736 {
             storyboard = UIStoryboard(name: "Main5.5", bundle: nil)
-//            iphone6Plus
+            //            iphone6Plus
         } else {
             storyboard = UIStoryboard(name: "Main", bundle: nil)
         }
@@ -67,8 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
- 
-
+    
+    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

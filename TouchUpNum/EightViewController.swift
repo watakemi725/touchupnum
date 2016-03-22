@@ -206,7 +206,6 @@ class EightViewController: UIViewController {
         
         //通算のコンボ(連続点)を計算
         
-        
         appDelegate.comboNum = comboBox.count
         if comboBox.count>0{
             appDelegate.maxComboNum = comboBox.maxElement()!
