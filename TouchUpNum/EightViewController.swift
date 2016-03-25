@@ -52,6 +52,8 @@ class EightViewController: UIViewController {
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     //AppDelegateのインスタンスを取得
+    
+    
     var timer = NSTimer()
     
     override func viewDidAppear(animated: Bool) {
@@ -75,6 +77,8 @@ class EightViewController: UIViewController {
         numBox = [0,1,2,3,4,5,6,7]
         
         firstTime = downTime
+        
+        
         
         setNum()
         //        for num in 0...btnBox.count-1 {
