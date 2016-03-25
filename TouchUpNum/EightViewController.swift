@@ -78,8 +78,6 @@ class EightViewController: UIViewController {
         
         firstTime = downTime
         
-        
-        
         setNum()
         //        for num in 0...btnBox.count-1 {
         //            btnBox[num].setTitle(String(numBox[num]), forState: .Normal)
