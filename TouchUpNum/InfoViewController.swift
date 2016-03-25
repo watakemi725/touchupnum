@@ -15,8 +15,7 @@ import GoogleMobileAds
 
 class InfoViewController: UIViewController , GADBannerViewDelegate {
     
-    
-    
+ 
     
     
     //Admob設定
