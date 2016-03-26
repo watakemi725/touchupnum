@@ -55,9 +55,7 @@ class ViewController: UIViewController, GADBannerViewDelegate  {
     
     
     var timer = NSTimer()
-    
-    
-    
+
     //Admob設定
     
     // AdMob ID を入れてください
