@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var btnPic:[UIImage]! = [UIImage(named: "en1.png")!,UIImage(named:"en2.png")!,UIImage(named:"en3.png")!,UIImage(named:"en4.png")!,UIImage(named:"en5.png")!,UIImage(named:"en6.png")!,UIImage(named:"en7.png")!,UIImage(named:"en8.png")!]
     
+    
+    //iphoneのデバイズに合わせた大きさ
+    
     func grabStoryboard() -> UIStoryboard {
         var storyboard = UIStoryboard()
         var height = UIScreen.mainScreen().bounds.size.height
